@@ -1,0 +1,23 @@
+<!-- member-details.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Détails du Membre</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+<h2>Détails du Membre</h2>
+
+<div>
+    <p>ID: <span th:text="${member.id}"></span></p>
+    <p>Nom: <span th:text="${member.name}"></span></p>
+    <p>Prénom: <span th:text="${member.lastName}"></span></p>
+    <p>Email: <span th:text="${member.email}"></span></p>
+</div>
+
+<a th:href="@{/members}">Retour à la liste</a>
+
+</body>
+</html>

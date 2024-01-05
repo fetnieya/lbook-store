@@ -1,0 +1,31 @@
+<!-- members-list.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Liste des Membres</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+<h2>Liste des Membres</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+    </tr>
+    <tr th:each="member : ${members}">
+        <td th:text="${member.id}"></td>
+        <td th:text="${member.name}"></td>
+        <td th:text="${member.lastName}"></td>
+        <td th:text="${member.email}"></td>
+    </tr>
+</table>
+
+<a th:href="@{/members/add}">Ajouter un Membre</a>
+
+</body>
+</html>

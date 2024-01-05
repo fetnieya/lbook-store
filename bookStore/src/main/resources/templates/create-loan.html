@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Loan</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Book Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="available_books">Available Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="my_books">My Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="create-loan.html">My Books</a>
+                </li>
+
+            </ul>
+            <div>
+                <a class="nav-link text-white" href="book_register">New Book Register</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<h2>Create a New Loan</h2>
+
+<form th:action="@{/loans}" method="post">
+    <div class="form-group">
+        <label for="dateLoan">Date of Loan:</label><br>
+        <input type="date" id="dateLoan" name="dateLoan" class="form-control"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="memberId">Member ID:</label><br>
+        <input type="number" id="memberId" name="member_id" class="form-control"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="bookId">Book ID:</label><br>
+        <input type="number" id="bookId" name="book_id" class="form-control"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="dateEmprunt">Date of Emprunt:</label><br>
+        <input type="date" id="dateEmprunt" name="dateEmprunt" class="form-control"><br>
+    </div>
+
+    <button type="submit" class="btn">Submit</button>
+</form>
+
+</body>
+</html>
